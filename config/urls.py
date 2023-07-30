@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from portfolio import views as portfolio_views
+
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
-]
+
+    path('', portfolio_views.index, name = 'portfolio-index'),
+
+] + static(settings.STATIC_URL, document_root = settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
