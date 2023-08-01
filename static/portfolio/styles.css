@@ -1,0 +1,17 @@
+header {
+    padding: 140px 0 140px 0;
+}
+
+.social-links a {
+	font-size: 28px;
+	color: black;
+	transition: 500ms;
+}
+
+.social-links a:hover {
+	translate: 0 -4px 0;
+}
+
+footer {
+	height: 80px;
+}

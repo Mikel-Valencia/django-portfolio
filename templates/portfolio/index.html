@@ -1,5 +1,54 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Hello World!</h1>
+
+    {% load static %}
+
+    <!-- Hero section -->
+    <header class="row justify-content-center text-center">
+        <div class="col-lg-8 col-md-10 col-12 px-lg-5 px-md-2">
+            <h1 class="fw-bold">
+                Hi! I'm Mikel,
+            </h1>
+            <h3>
+                an Industrial Engineer and Junior Data Scientist passionate about software development.
+            </h3>
+            <div class="p-3">
+                <svg viewBox="0 0 108 20" width="200">
+                    <path 
+                        d="m 1 10 a 2 2 0 0 0 5 0 a 2 2 0 0 0 -5 0 m 5 0 a 1 1 0 0 0 3 0 a 1 1 0 0 0 -3 0 m 4 -2 l 2 2 
+                        l -2 2 m 2 -5 l 3 3 l -3 3 m 2 -7 l 4 4 l -4 4 m 5 -4 a 1 1 0 0 0 2 0 a 1 1 0 0 0 -2 0 m 7 -4 
+                        l -4 4 l 4 4 m 2 -7 l -3 3 l 3 3 m 2 -5 l -2 2 l 2 2 m 1 -2 a 1 1 0 0 0 3 0 a 1 1 0 0 0 -3 0 
+                        m 3 0 l 4 -4 l 4 4 l -4 4 l -4 -4 m 2 0 l 2 -2 l 2 2 l -2 2 l -2 -2 z m 3 -3 l 6 0 m 0 6 l -6 0 
+                        m 3 -3 l 6 0 m 6 -6 l -6 6 l 6 6 m 0 3 l -4 -4 m 0 -10 l 4 -4 m -7 5 m 0 8 m 7 -2 a 1 1 0 0 1 0 
+                        -4 m -54 0" 
+                        fill="white" stroke="black">
+                    </path>
+                    <path 
+                        transform="translate(108, 0) scale(-1, 1)" 
+                        d="m 1 10 a 2 2 0 0 0 5 0 a 2 2 0 0 0 -5 0 m 5 0 a 1 1 0 0 0 3 0 a 1 1 0 0 0 -3 0 m 4 -2 l 2 2 
+                        l -2 2 m 2 -5 l 3 3 l -3 3 m 2 -7 l 4 4 l -4 4 m 5 -4 a 1 1 0 0 0 2 0 a 1 1 0 0 0 -2 0 m 7 -4 
+                        l -4 4 l 4 4 m 2 -7 l -3 3 l 3 3 m 2 -5 l -2 2 l 2 2 m 1 -2 a 1 1 0 0 0 3 0 a 1 1 0 0 0 -3 0 
+                        m 3 0 l 4 -4 l 4 4 l -4 4 l -4 -4 m 2 0 l 2 -2 l 2 2 l -2 2 l -2 -2 z m 3 -3 l 6 0 m 0 6 l -6 0 
+                        m 3 -3 l 6 0 m 6 -6 l -6 6 l 6 6 m 0 3 l -4 -4 m 0 -10 l 4 -4 m -7 5 m 0 8 m 7 -2 a 1 1 0 0 1 0 
+                        -4 m -54 0" 
+                        fill="white" stroke="black">
+                    </path>
+                </svg>
+            </div>
+            <p class="text-muted">
+                I'm currently at ITP Aero, where I work as a Junior Data Scientist on machine learning projects and building
+                fullstack web applications.
+            </p>
+            <div class="d-inline-flex social-links">
+                <a class="px-2" href="https://www.linkedin.com/in/mikelvalenciazabaleta/" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a class="px-2" href="https://github.com/Mikel-Valencia" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
 {% endblock content %}
