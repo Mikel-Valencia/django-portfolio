@@ -16,27 +16,30 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-        <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+        {% block synchronousJS %}{% endblock synchronousJS %}
+
+        <link rel="stylesheet" href="{% static 'base.css' %}">
+        {% block synchronousCSS %}{% endblock synchronousCSS %}
 
     </head>
     
-    <body>
+    <body class="d-flex flex-column m-0">
         
-        <div class="container p-4">
+        <div class="container p-4 body-content">
 
             {% include 'partials/navbar.html' %}
 
-            <div id="body-content">
+            <div class="body-content">
                 {% block content %}
                 {% endblock content %}
             </div>
 
         </div>
-   
-    </body>
+        
+        <footer class="d-flex justify-content-center align-items-center bg-dark">
+            <p class="text-light m-0">Copyright © 2023 Mikel Valencia. All rights reserved.</p>
+        </footer>
 
-    <footer class="d-flex justify-content-center align-items-center bg-dark">
-        <p class="text-light m-0">Copyright © 2023 Mikel Valencia. All rights reserved.</p>
-    </footer>
+    </body>
     
 </html>

@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', portfolio_views.index, name = 'portfolio-index'),
+    path('about/', portfolio_views.about, name = 'portfolio-about'),
 
 ] + static(settings.STATIC_URL, document_root = settings.MEDIA_ROOT)
 

@@ -8,3 +8,6 @@ def index(request):
         'projects': projects,
     }
     return render(request, 'portfolio/index.html', context)
+
+def about(request):
+    return render(request, 'portfolio/about.html')

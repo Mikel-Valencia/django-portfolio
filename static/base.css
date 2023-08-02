@@ -1,0 +1,11 @@
+body {
+	min-height: 100vh;
+}
+
+.body-content {
+	flex: 1;
+}
+
+footer {
+	height: 80px;
+}
