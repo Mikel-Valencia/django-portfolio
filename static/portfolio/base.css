@@ -2,6 +2,10 @@ body {
 	min-height: 100vh;
 }
 
+main {
+	margin-top: 4.5rem;
+}
+
 .body-content {
 	flex: 1;
 }
@@ -12,6 +16,6 @@ footer {
 
 @media (max-width: 768px) {
 	footer p {
-		font-size: 14px;
+		font-size: .8rem;
 	}
 }

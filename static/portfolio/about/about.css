@@ -1,3 +1,13 @@
+.accordion-button {
+	--bs-accordion-active-color: black;
+	--bs-accordion-active-bg: #eeeeee;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
 .social-links a i {
 	font-size: 20px;
 }
@@ -6,7 +16,7 @@
 	.gmail-link span, .social-links span {
 		font-size: .85rem !important;
 	}
-	.about-text {
-		font-size: 1rem !important;
+	.about-text, .working-experience-text {
+		font-size: .9rem !important;
 	}
 }

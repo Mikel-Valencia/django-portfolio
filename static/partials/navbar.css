@@ -1,0 +1,45 @@
+nav {
+    z-index: 4;  /* To ensure that the navbar displays on the top of other Bootstrap components */
+}
+
+/*
+Blur effect and shadow.
+The blur effect is neccesary to apply into the ::after pseudoelement instead of applying directly into the nav
+tag due to compatibility issues with Bootstrap framework.
+*/
+nav::after {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    --_nav-bg: transparent;
+    background-color: var(--_nav-bg);
+    -webkit-backdrop-filter: blur(var(--_nav-blur));
+    backdrop-filter: blur(var(--_nav-blur));
+
+    opacity: 0;
+    box-shadow: 0 .5rem 1rem -.25rem rgba(0, 0, 0, .3);
+
+    transition: background-color 200ms, backdrop-filter 200ms, opacity 200ms;
+
+}
+
+nav.sticking::after {
+    --_nav-bg: rgba(240, 240, 240, 0.5);
+}
+
+/* if backdrop support: glass effect */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    nav.sticking::after {
+        --_nav-blur: 10px;
+    }
+}
+
+nav.sticking::after {
+    opacity: 1;
+}
