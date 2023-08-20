@@ -12,15 +12,15 @@
 
 {% block content %}
 
-    <!-- About section's header -->
+    <!-- Page's header -->
     <header class="row mt-5">
-        <h2>About me</h2>
+        <h1>About me</h1>
         <hr class="fw-bold">
     </header>
 
-    <!-- About section -->
-    <section class="row mb-3">
-        <div class="d-flex flex-wrap column-gap-3 row-gap-2">
+    <!-- About section intro & social links -->
+    <section class="row">
+        <div class="d-flex flex-wrap column-gap-3 row-gap-2 mb-3">
             <button id="gmail-btn" class="btn btn-outline-dark gmail-link" onclick="copyGmail()">
                 <i class="me-1 bi bi-envelope-at"></i>
                 <span id="gmail" class="fs-6 fw-normal">mikel.valencia02@gmail.com</span>
@@ -36,8 +36,6 @@
                 </a>
             </div>
         </div>
-    </section>
-    <section class="row">
         <p class="fs-6 fw-normal about-text">
             Thank you for visiting my portfolio! My name is Mikel, and I'm an industrial engineer living in Spain interested 
             in mechanical engineering and software development. I'm currently working at
@@ -46,24 +44,19 @@
             </a>
             as a Junior Data Scientist, where I work on machine learning projects and develop Fullstack Web Applications.
         </p>
-        <p class="fs-6 fw-normal about-text">
+        <p class="mb-0 fs-6 fw-normal about-text">
             Besides of engineering and software development, I love music and I dedicate my free time to my musical studies.
             I obtained the title of Technician of the Professional Teachings of Music in the Specialty of Piano back in 2016,
             and since then I have continued training as a pianist. In addition, nowadays I give some concerts during the year.
         </p>   
     </section>
 
-    <!-- Working experience section's header -->
-    <header class="row mt-4">
-        <h2>Working experience</h2>
-        <hr class="fw-bold">
-    </header>
-
     <!-- Working experience section -->
     <section class="row">
+        <h2 class="mb-3 text-center">Working Experience</h2>
         <div class="accordion" id="working-experience-accordion">
             <div class="accordion-item">
-                <h2 class="accordion-header">
+                <h3 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
                         <div>
                             <h4>ITP Aero</h4>
@@ -72,7 +65,7 @@
                             </p>
                         </div> 
                     </button>
-                </h2>
+                </h3>
                 <div id="collapse-2" class="accordion-collapse collapse" data-bs-parent="#working-experience-accordion">
                     <div class="accordion-body">
                         <h6>Resposibilities</h6>
@@ -96,7 +89,7 @@
                             <li class="list-group-item border-0">
                                 <p class="mb-0 fs-6 fw-normal working-experience-text">
                                     Provide EDM technologists / process engineers with an application that facilitates and enables to
-                                    perform improved process data analysis, and implement statistical tools that encourage the use of
+                                    perform efficient process data analysis, and implement statistical tools that encourage the use of
                                     good SPC practices.
                                 </p>
                             </li>
@@ -105,7 +98,7 @@
                 </div>
             </div>
             <div class="accordion-item">
-                <h2 class="accordion-header">
+                <h3 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
                         <div>
                             <h4>ITP Aero</h4>
@@ -114,7 +107,7 @@
                             </p>
                         </div> 
                     </button>
-                </h2>
+                </h3>
                 <div id="collapse-1" class="accordion-collapse collapse" data-bs-parent="#working-experience-accordion">
                     <div class="accordion-body">
                         <h6>Resposibilities</h6>
@@ -147,16 +140,258 @@
           </div>  
     </section>
 
-    <!-- Skills section's header -->
-    <header class="row mt-4">
-        <h2>Skills</h2>
-        <hr class="fw-bold">
-    </header>
+    <!-- Skills section: Software Development -->
+    <section class="row justify-content-center">
 
-    <!-- Skills section -->
-    <section class="row">
-        <h6>Soft skills</h6>
-        <h6>Technical skills</h6> 
+        <h2 class="mb-3 text-center">Software Development Skills</h2>
+
+        <h4 class="text-center mt-1 mb-3">Frontend</h4>
+        <div class="row justify-content-center gx-sm-2 gx-md-3 gx-lg-4 gx-xl-5 row-gap-3 skills-cards">
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 384 512">
+                        <path fill="#ff5300"
+                        d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 
+                        27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">HTML</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 384 512">
+                        <path fill="#266efc"
+                        d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 
+                        28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 
+                        112h242.2z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">CSS</h6>
+                        <em class="card-text text-start">Frameworks:</em>
+                        <span class="card-text">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 448 512">
+                        <path fill="#f2d200"
+                        d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/>
+                        <path fill="#2f2f2f"
+                        d="M243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 
+                        13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 
+                        41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 
+                        24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 
+                        7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">JavaScript</h6>
+                        <em class="card-text text-start">Libraries:</em>
+                        <span class="card-text">JQuery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h4 class="text-center mt-4 mb-3">Backend</h4>
+        <div class="row justify-content-center gx-sm-2 gx-md-3 gx-lg-4 gx-xl-5 row-gap-3 skills-cards">
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 448 512">
+                        <path fill="#eaea38"
+                        d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 
+                        54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 
+                        0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 
+                        0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3z"/>
+                        <path fill="#0e86d0" 
+                        d="M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 
+                        8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 
+                        56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 
+                        9.2 20.1 20.4s-9 20.3-20.1 20.3z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">Python</h6>
+                        <em class="card-text text-start">Frameworks:</em>
+                        <span class="card-text">pyobdc, Numpy, Pandas, Plotly, Dash, Sklearn, Statsmodels, Flask, Django</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 448 512">
+                        <path fill="#004db2"
+                        d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 
+                        214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 
+                        54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 
+                        390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 
+                        476.2 0 432V346.1z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">SQL</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="text-center mt-4 mb-3">Tools</h4>
+        <div class="row justify-content-center gx-sm-2 gx-md-3 gx-lg-4 gx-xl-5 row-gap-3 skills-cards">
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 448 512">
+                        <path 
+                        d="M80 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48zm80-24c0 32.8-19.7 61-48 73.3v87.8c18.8-10.9 40.7-17.1 64-17.1h96c35.3 0 
+                        64-28.7 64-64v-6.7C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V160c0 70.7-57.3 
+                        128-128 128H176c-35.3 0-64 28.7-64 64v6.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 
+                        48-73.3V352 153.3C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm232 0a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM80 
+                        456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">SW Version Control</h6>
+                        <p class="card-text">Git, SVN Tortoise</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 496 512">
+                        <path 
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 
+                        1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 
+                        3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 
+                        12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 
+                        0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 
+                        23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 
+                        13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 
+                        75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 
+                        5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 
+                        1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 
+                        2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 
+                        1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">Github</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 384 512">
+                        <path 
+                        d="M14 95.7924C14 42.8877 56.8878 0 109.793 0H274.161C327.066 0 369.954 42.8877 369.954 95.7924C369.954 129.292 352.758 
+                        158.776 326.711 175.897C352.758 193.019 369.954 222.502 369.954 256.002C369.954 308.907 327.066 351.795 274.161 
+                        351.795H272.081C247.279 351.795 224.678 342.369 207.666 326.904V415.167C207.666 468.777 163.657 512 110.309 512C57.5361 
+                        512 14 469.243 14 416.207C14 382.709 31.1945 353.227 57.2392 336.105C31.1945 318.983 14 289.5 14 256.002C14 222.502 31.196 
+                        193.019 57.2425 175.897C31.196 158.776 14 129.292 14 95.7924ZM176.288 191.587H109.793C74.2172 191.587 45.3778 220.427 
+                        45.3778 256.002C45.3778 291.44 73.9948 320.194 109.381 320.416C109.518 320.415 109.655 320.415 109.793 
+                        320.415H176.288V191.587ZM207.666 256.002C207.666 291.577 236.505 320.417 272.081 320.417H274.161C309.737 320.417 338.576 
+                        291.577 338.576 256.002C338.576 220.427 309.737 191.587 274.161 191.587H272.081C236.505 191.587 207.666 220.427 207.666 
+                        256.002ZM109.793 351.795C109.655 351.795 109.518 351.794 109.381 351.794C73.9948 352.015 45.3778 380.769 45.3778 
+                        416.207C45.3778 451.652 74.6025 480.622 110.309 480.622C146.591 480.622 176.288 451.186 176.288 
+                        415.167V351.795H109.793ZM109.793 31.3778C74.2172 31.3778 45.3778 60.2173 45.3778 95.7924C45.3778 131.368 74.2172 160.207 
+                        109.793 160.207H176.288V31.3778H109.793ZM207.666 160.207H274.161C309.737 160.207 338.576 131.368 338.576 95.7924C338.576 
+                        60.2173 309.737 31.3778 274.161 31.3778H207.666V160.207Z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">Figma</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
+
+    <!-- Skills section: Engineering -->
+    <section class="row mb-3 justify-content-center">
+
+        <h2 class="mb-3 text-center">Engineering Skills</h2>
+
+        <div class="row justify-content-center gx-sm-2 gx-md-3 gx-lg-4 gx-xl-5 row-gap-3 skills-cards">
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 448 512">
+                        <path 
+                        d="M0 32h214.6v214.6H0V32zm233.4 0H448v214.6H233.4V32zM0 265.4h214.6V480H0V265.4zm233.4 0H448V480H233.4V265.4z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">MS Office 365</h6>
+                        <p class="card-text">MS Word, MS Excel, MS Power Point</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 6 24 11">
+                        <path fill="#000000"
+                        d="M19.0424 10.089l-.993 2.4233-.9932-2.4233h-1.227l1.6066 3.921-.7039 1.7179h1.227l2.3104-5.639z
+                        m4.667 2.1272c-.1936-.1936-.5004-.3377-.9209-.4332l-.6984-.1599c-.1678-.0447-.2858-.0923-.3531-.143-.0673-.0506-.101-.1207-.101-.2101 
+                        0-.1232.0562-.2186.1683-.2859.112-.0673.2664-.101.4628-.101.426 
+                        0 .858.1513 1.2954.4542l.3362-.841c-.2241-.1627-.4767-.2886-.757-.3784a2.8304 2.8304 0 0 0-.8663-.1347c-.3476 
+                        0-.6576.0562-.9292.1683-.2724.112-.4826.2665-.631.4624-.1485.1964-.223.4237-.223.6814 
+                        0 .3254.0939.582.282.7696.1876.188.4806.3267.8789.4165l.673.1517c.2075.0447.3492.0954.4248.1512.076.0562.1136.1346.1136.2356 
+                        0 .1124-.0546.2007-.1639.2648-.1092.0645-.262.0966-.4584.0966-.2748 
+                        0-.5468-.042-.816-.1259-.2692-.0843-.5163-.2019-.7403-.3531l-.3366.8745c.23.1628.5032.2875.8204.3746.3167.0867.6655.1302 1.0471.1302.555 
+                        0 .991-.1136 1.3081-.3408.3167-.2273.4751-.5397.4751-.938-.0008-.331-.0974-.593-.2906-.7866zm-9.3815-.4332l-.698-.1599c-.1682-.0447-.2862-.0923-.3535-.143-.0669-.0506-.1006-.1207-.1006-.2101 
+                        0-.1232.0558-.2186.168-.2859.112-.0673.2664-.101.4627-.101.426 0 .858.1513 1.2955.4542l.3365-.841c-.2245-.1627-.4767-.2886-.757-.3784a2.8323 2.8323 0 0 
+                        0-.8663-.1347c-.348 0-.6576.0562-.9296.1683-.272.112-.4822.2665-.6306.4624-.1489.1964-.223.4237-.223.6814 
+                        0 .3254.0943.582.282.7696.1876.188.481.3267.8793.4165l.673.1517c.2075.0447.3488.0954.4248.1512.0756.0562.1137.1346.1137.2356 
+                        0 .1124-.0546.2007-.164.2648-.1092.0645-.2624.0966-.4584.0966-.2748 0-.5468-.042-.816-.1259-.2688-.0843-.5159-.2019-.7403-.3531l-.3362.8745c.2297.1628.5032.2875.82.3746.3167.0867.6659.1302 1.0471.1302.5551 
+                        0 .991-.1136 1.3081-.3408.3168-.2273.4751-.5397.4751-.938 0-.3305-.0966-.593-.2902-.7862-.1944-.194-.5012-.3381-.922-.4336zM9.823 9.9828c-.2918 
+                        0-.5539.059-.7863.1766-.2328.1176-.422.2886-.5677.5131v-.5887H7.2325v4.1301h1.27v-2.3133c0-.2803.08-.5048.24-.673.1595-.1683.3713-.2526.635-.2526.219 
+                        0 .3797.0645.4838.1936.1037.129.1556.3337.1556.614v2.431h1.27v-2.49c0-.5831-.1207-1.019-.3618-1.308-.2415-.2882-.6089-.4328-1.1022-.4328z
+                        M4.4334 8.4594l-.8176 1.9954 1.5381 3.7544h1.7262zm-.3726-.1873H2.4325L0 14.2091h1.6284z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">Ansys Workbench</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 512 512">
+                        <path fill="#000000"
+                        d="M352 96c0 14.3-3.1 27.9-8.8 40.2L396 227.4c-23.7 25.3-54.2 44.1-88.5 53.6L256 192h0 0l-68 117.5c21.5 6.8 44.3 10.5 68.1 
+                        10.5c70.7 0 133.8-32.7 174.9-84c11.1-13.8 31.2-16 45-5s16 31.2 5 45C428.1 341.8 347 384 256 384c-35.4 
+                        0-69.4-6.4-100.7-18.1L98.7 463.7C94 471.8 87 478.4 78.6 482.6L23.2 510.3c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 
+                        496V440.6c0-8.4 2.2-16.7 6.5-24.1l60-103.7C53.7 301.6 41.8 289.3 31.2 276c-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 
+                        11.8 13.8 18.2 20.1l69.4-119.9c-5.6-12.2-8.8-25.8-8.8-40.2c0-53 43-96 96-96s96 43 96 96zm21 297.9c32.6-12.8 62.5-30.8 
+                        88.9-52.9l43.7 75.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6 
+                        .7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9L373 393.9zM256 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">CAD</h6>
+                        <p class="card-text">Siemens NX, Catia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-5 col-sm-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 640 512">
+                        <path fill="#000000"
+                        d="M384 96V320H64L64 96H384zM64 32C28.7 32 0 60.7 0 96V320c0 35.3 28.7 64 64 64H181.3l-10.7 32H96c-17.7 0-32 14.3-32 
+                        32s14.3 32 32 32H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H277.3l-10.7-32H384c35.3 0 64-28.7 
+                        64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48V432c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 
+                        48-48V80c0-26.5-21.5-48-48-48H528zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 
+                        80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                    </svg>
+                    <div class="card-body">
+                        <h6 class="card-title">TeamCenter</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="d-none d-sm-flex position-fixed end-0 bottom-0 me-3 me-md-4 mb-3 mb-md-5 rounded-circle bg-primary back-to-top">
+        <a class="h-100 w-100 rounded-circle d-flex justify-content-center align-items-center" href="#">
+            <svg height="2rem" viewBox="0 0 384 512">
+                <path fill="#ffffff"
+                d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 
+                14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
+            </svg>
+        </a>
+    </div>
 
 {% endblock content %}
