@@ -25,7 +25,7 @@ nav::after {
     opacity: 0;
     box-shadow: 0 .5rem 1rem -.25rem rgba(0, 0, 0, .3);
 
-    transition: background-color 200ms, backdrop-filter 200ms, opacity 200ms;
+    transition: background-color 200ms, opacity 200ms;
 
 }
 

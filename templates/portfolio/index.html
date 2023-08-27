@@ -13,8 +13,8 @@
 {% block content %}
 
     <!-- Hero section -->
-    <header class="row justify-content-center text-center">
-        <div class="col-lg-8 col-md-10 col-12 px-lg-5 px-md-2">
+    <header class="row justify-content-center align-items-center text-md-start text-center">
+        <div class="col-lg-7 col-md-6 col-12 order-md-1 order-2 px-lg-5 px-md-2">
             <div class="intro">
                 <h1 class="fw-bold">
                     Hello! I'm Mikel,
@@ -23,42 +23,459 @@
                     an Industrial Engineer and Junior Data Scientist passionate about software development.
                 </h3>
             </div>
-            <div class="p-3 svg-separator">
-                <svg viewBox="0 0 108 20" width="200">
-                    <path 
-                        d="m 1 10 a 2 2 0 0 0 5 0 a 2 2 0 0 0 -5 0 m 5 0 a 1 1 0 0 0 3 0 a 1 1 0 0 0 -3 0 m 4 -2 l 2 2 
-                        l -2 2 m 2 -5 l 3 3 l -3 3 m 2 -7 l 4 4 l -4 4 m 5 -4 a 1 1 0 0 0 2 0 a 1 1 0 0 0 -2 0 m 7 -4 
-                        l -4 4 l 4 4 m 2 -7 l -3 3 l 3 3 m 2 -5 l -2 2 l 2 2 m 1 -2 a 1 1 0 0 0 3 0 a 1 1 0 0 0 -3 0 
-                        m 3 0 l 4 -4 l 4 4 l -4 4 l -4 -4 m 2 0 l 2 -2 l 2 2 l -2 2 l -2 -2 z m 3 -3 l 6 0 m 0 6 l -6 0 
-                        m 3 -3 l 6 0 m 6 -6 l -6 6 l 6 6 m 0 3 l -4 -4 m 0 -10 l 4 -4 m -7 5 m 0 8 m 7 -2 a 1 1 0 0 1 0 
-                        -4 m -54 0" 
-                        fill-opacity="0" stroke="black">
-                    </path>
-                    <path 
-                        transform="translate(108, 0) scale(-1, 1)" 
-                        d="m 1 10 a 2 2 0 0 0 5 0 a 2 2 0 0 0 -5 0 m 5 0 a 1 1 0 0 0 3 0 a 1 1 0 0 0 -3 0 m 4 -2 l 2 2 
-                        l -2 2 m 2 -5 l 3 3 l -3 3 m 2 -7 l 4 4 l -4 4 m 5 -4 a 1 1 0 0 0 2 0 a 1 1 0 0 0 -2 0 m 7 -4 
-                        l -4 4 l 4 4 m 2 -7 l -3 3 l 3 3 m 2 -5 l -2 2 l 2 2 m 1 -2 a 1 1 0 0 0 3 0 a 1 1 0 0 0 -3 0 
-                        m 3 0 l 4 -4 l 4 4 l -4 4 l -4 -4 m 2 0 l 2 -2 l 2 2 l -2 2 l -2 -2 z m 3 -3 l 6 0 m 0 6 l -6 0 
-                        m 3 -3 l 6 0 m 6 -6 l -6 6 l 6 6 m 0 3 l -4 -4 m 0 -10 l 4 -4 m -7 5 m 0 8 m 7 -2 a 1 1 0 0 1 0 
-                        -4 m -54 0" 
-                        fill="white" stroke="black">
-                    </path>
-                </svg>
-            </div>
             <p class="text-muted description">
                 I'm currently at ITP Aero, where I work as a Junior Data Scientist on machine learning projects and building
                 fullstack web applications.
             </p>
-            <div class="d-inline-flex social-links">
-                <a class="px-2" href="https://www.linkedin.com/in/mikelvalenciazabaleta/" target="_blank">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a class="px-2" href="https://github.com/Mikel-Valencia" target="_blank">
-                    <i class="bi bi-github"></i>
-                </a>
+            <div class="d-flex flex-wrap justify-content-md-start justify-content-center column-gap-3 row-gap-2 mb-3">
+                <button id="gmail-btn" class="btn btn-outline-dark gmail-link" onclick="copyGmail()">
+                    <i class="me-1 bi bi-envelope-at"></i>
+                    <span id="gmail" class="fw-normal">mikel.valencia02@gmail.com</span>
+                </button>
+                <div class="d-flex column-gap-3 social-links">
+                    <a class="d-inline-flex align-items-center text-black text-decoration-none" href="https://www.linkedin.com/in/mikelvalenciazabaleta/" target="_blank">
+                        <i class="me-1 bi bi-linkedin"></i>
+                        <span class="fs-6 fw-normal">LinkedIn</span>
+                    </a>
+                    <a class="d-inline-flex align-items-center text-black text-decoration-none" href="https://github.com/Mikel-Valencia" target="_blank">
+                        <i class="me-1 bi bi-github"></i>
+                        <span class="fs-6 fw-normal">Github</span>
+                    </a>
+                </div>
             </div>
+            <a role="button" class="btn btn-primary d-inline-flex justify-content-center align-items-center download-CV" href="{% static 'portfolio/CV Mikel Valencia Zabaleta (ENG).pdf' %}" target="_blank">
+                Download CV (PDF)
+            </a>
+        </div>
+        <div class="col-lg-5 col-md-6 order-md-2 order-1">
+            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 979.32677 424.8366" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M993.71816,412.83936H419.142a9.19888,9.19888,0,0,0,0,18.39776H435.417V651.3026a9.19888,9.19888,0,0,0,18.39776,0l.1398-220.06548h461.1557l42.52,220.06548a9.19887,9.19887,0,1,0,18.39775,0l2.67633-220.06548h15.01383a9.19888,9.19888,0,0,0,0-18.39776Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M518.73716,371.85047v38.9547H421.141a19.48915,19.48915,0,1,1-1.35523-38.95474q.67739-.02358,1.35523,0Z" transform="translate(-110.33661 -237.5817)" fill="#f2f2f2"/><path d="M521.13449,410.50552a1.49881,1.49881,0,0,1-1.49822,1.49822H419.40273a20.52615,20.52615,0,0,1,0-41.05229H519.63627a1.49827,1.49827,0,1,1,0,2.99653H419.40273a17.52964,17.52964,0,0,0,0,35.05924H519.63627A1.49883,1.49883,0,0,1,521.13449,410.50552Z" transform="translate(-110.33661 -237.5817)" fill="#6c63ff"/><path d="M518.73716,380.84H413.85905a.29966.29966,0,0,1-.00552-.59929H518.73716a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M518.73716,388.03169H413.85905a.29966.29966,0,0,1-.00552-.59929H518.73716a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M518.73716,395.22332H413.85905a.29966.29966,0,0,1-.00552-.59929H518.73716a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M518.73716,402.41487H413.85905a.29966.29966,0,0,1-.00552-.59929H518.73716a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M500.33941,330.80932v38.95474H402.74324a19.48915,19.48915,0,0,1-1.35522-38.95474q.67737-.02358,1.35522,0Z" transform="translate(-110.33661 -237.5817)" fill="#f2f2f2"/><path d="M502.73673,369.46442a1.49885,1.49885,0,0,1-1.49822,1.49826H401.005a20.52614,20.52614,0,0,1,0-41.05229H501.23851a1.49826,1.49826,0,1,1,0,2.99652H401.005a17.52964,17.52964,0,0,0,0,35.05928H501.23851A1.49884,1.49884,0,0,1,502.73673,369.46442Z" transform="translate(-110.33661 -237.5817)" fill="#3f3d56"/><path d="M500.33941,339.79886H395.4613a.29966.29966,0,0,1-.00553-.59929H500.33941a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M500.33941,346.99054H395.4613a.29966.29966,0,0,1-.00553-.59929H500.33941a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M500.33941,354.18217H395.4613a.29966.29966,0,0,1-.00553-.59929H500.33941a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M500.33941,361.37376H395.4613a.29966.29966,0,0,1-.00553-.59929H500.33941a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M613.87355,550.68347V516.71838a5.661,5.661,0,0,0-5.66085-5.66085H479.4284a5.661,5.661,0,0,0-5.66084,5.66085v33.96509Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><rect x="363.43092" y="325.83868" width="140.10602" height="43.87158" fill="#ccc"/><path d="M473.76756,620.02887V653.994a5.661,5.661,0,0,0,5.66084,5.66084H608.2127a5.661,5.661,0,0,0,5.66085-5.66084V620.02887Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><circle cx="432.77633" cy="294.70402" r="4.24564" fill="#fff"/><circle cx="432.77633" cy="351.3125" r="4.24564" fill="#fff"/><circle cx="433.00385" cy="406.72228" r="4.24564" fill="#fff"/><path d="M597.989,472.33053v38.9547H500.39287a19.48916,19.48916,0,0,1-1.35647-38.9547q.678-.02358,1.35647,0Z" transform="translate(-110.33661 -237.5817)" fill="#f2f2f2"/><path d="M600.38637,510.98558a1.49881,1.49881,0,0,1-1.49822,1.49822H498.65461a20.52615,20.52615,0,0,1-.0247-41.05229H598.88815a1.49827,1.49827,0,1,1,0,2.99653H498.65461a17.52963,17.52963,0,0,0,0,35.05923H598.88815A1.49885,1.49885,0,0,1,600.38637,510.98558Z" transform="translate(-110.33661 -237.5817)" fill="#3f3d56"/><path d="M597.989,481.32H493.111a.29966.29966,0,0,1-.00553-.59929H597.98913a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M597.989,488.51175H493.111a.29966.29966,0,0,1-.00553-.59929H597.98913a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M597.989,495.70338H493.111a.29966.29966,0,0,1-.00553-.59929H597.98913a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M597.989,502.89493H493.111a.29966.29966,0,0,1-.00553-.59929H597.98913a.29966.29966,0,0,1,0,.59929Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M483.36747,317.81415H438.90162a2.74745,2.74745,0,0,0-1.21689.28306l-11.22288,5.61835a2.0452,2.0452,0,0,0,0,3.76443l11.22288,5.61835a2.74718,2.74718,0,0,0,1.21689.28306h44.46585a2.33381,2.33381,0,0,0,2.4628-2.16532v-11.2367A2.3338,2.3338,0,0,0,483.36747,317.81415Z" transform="translate(-110.33661 -237.5817)" fill="#3f3d56"/><path d="M485.83027,319.97947v11.2367a2.33383,2.33383,0,0,1-2.4628,2.16532h-8.8589V317.81415h8.8589A2.33383,2.33383,0,0,1,485.83027,319.97947Z" transform="translate(-110.33661 -237.5817)" fill="#6c63ff"/><path d="M216.78083,537.99332a35.33951,35.33951,0,0,0,34.12552-6.01134c11.95262-10.03214,15.70013-26.56,18.74934-41.864q4.50949-22.63308,9.019-45.26617l-18.88217,13.00153c-13.57891,9.34993-27.46375,18.99939-36.86572,32.54233S209.42082,522.42587,216.975,537.08" transform="translate(-110.33661 -237.5817)" fill="#e6e6e6"/><path d="M218.39489,592.79741c-1.91113-13.92071-3.87625-28.0202-2.53572-42.09016,1.19057-12.4956,5.00277-24.70032,12.764-34.70734a57.73582,57.73582,0,0,1,14.81307-13.42309c1.48131-.935,2.84468,1.41257,1.36983,2.34348a54.88844,54.88844,0,0,0-21.71125,26.19626c-4.72684,12.02273-5.48591,25.12848-4.67135,37.90006.4926,7.72345,1.53656,15.39627,2.58859,23.05926a1.40615,1.40615,0,0,1-.94781,1.66928,1.3653,1.3653,0,0,1-1.6693-.94781Z" transform="translate(-110.33661 -237.5817)" fill="#f2f2f2"/><path d="M236.80246,568.16434a26.01425,26.01425,0,0,0,22.6665,11.69871c11.47417-.54466,21.04-8.55293,29.651-16.15584l25.46969-22.48783-16.85671-.80672c-12.12234-.58011-24.55745-1.12124-36.10356,2.617s-22.19457,12.73508-24.30583,24.68624" transform="translate(-110.33661 -237.5817)" fill="#e6e6e6"/><path d="M212.99392,600.79976c9.19853-16.27621,19.86805-34.36538,38.93262-40.14695A43.445,43.445,0,0,1,268.3022,558.962c1.73863.14991,1.30448,2.82994-.431,2.6803a40.36111,40.36111,0,0,0-26.133,6.91386c-7.36852,5.01554-13.10573,11.98848-17.96161,19.383-2.97439,4.52936-5.63867,9.25082-8.30346,13.966-.85161,1.50687-3.34078.41915-2.47922-1.10534Z" transform="translate(-110.33661 -237.5817)" fill="#f2f2f2"/><path d="M198.25523,617.93168a19.69836,19.69836,0,0,1,12.0709-16.49847v-9.40956h15.782v9.70608a19.68812,19.68812,0,0,1,11.41362,16.202l3.711,43.13835H194.54417Z" transform="translate(-110.33661 -237.5817)" fill="#f2f2f2"/><path d="M734.973,411.955l-4.69488-1.97685-3.22067-23.53551h-42.889l-3.491,23.43936-4.20031,2.10013a.99744.99744,0,0,0,.44611,1.88955h57.66283A.99739.99739,0,0,0,734.973,411.955Z" transform="translate(-110.33661 -237.5817)" fill="#e6e6e6"/><path d="M811.1898,389.574H600.50692a4.174,4.174,0,0,1-4.16467-4.174V355.69092H815.35446V385.4A4.17408,4.17408,0,0,1,811.1898,389.574Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/><path d="M815.57469,369.73213H596.15V242.61337a5.0375,5.0375,0,0,1,5.03186-5.03167h209.361a5.03755,5.03755,0,0,1,5.03191,5.03167Z" transform="translate(-110.33661 -237.5817)" fill="#3f3d56"/><path d="M802.46932,360.50584h-193.214a3.88344,3.88344,0,0,1-3.87919-3.87908V250.68707a3.88365,3.88365,0,0,1,3.87919-3.87932h193.214a3.88366,3.88366,0,0,1,3.8792,3.87932V356.62676A3.88345,3.88345,0,0,1,802.46932,360.50584Z" transform="translate(-110.33661 -237.5817)" fill="#fff"/><path d="M751.57964,397.88662a11.6159,11.6159,0,0,1,17.666,2.27241l26.13446-4.64642,6.69716,15.19317-36.99908,6.04328a11.67883,11.67883,0,0,1-13.49855-18.86244Z" transform="translate(-110.33661 -237.5817)" fill="#ffb6b6"/><path d="M775.77611,417.286l27.24571-.33963,3.44882-.04668,55.43253-.69843s15.05312-14.3609,28.16068-29.1465l-1.83719-13.28833A54.29159,54.29159,0,0,0,870.023,340.1519C851.24988,352.696,840.363,377.52559,840.363,377.52559l-34.37018,8.22071-3.43848.82227-21.35608,5.10326Z" transform="translate(-110.33661 -237.5817)" fill="#6c63ff"/><path d="M915.25011,498.96167H864.39249c0,2.17915-55.59414,3.94772-55.59414,3.94772a20.30858,20.30858,0,0,0-3.33166,3.15818,19.59694,19.59694,0,0,0-4.58,12.63271v3.15818a19.74588,19.74588,0,0,0,19.73861,19.73861h94.62478a19.75579,19.75579,0,0,0,19.73862-19.73861v-3.15818A19.76607,19.76607,0,0,0,915.25011,498.96167Z" transform="translate(-110.33661 -237.5817)" fill="#e4e4e4"/><rect x="747.4019" y="303.23122" width="20.52816" height="118.48951" fill="#e4e4e4"/><path d="M799.31222,658.58132c0,2.218,31.10721.858,69.47992.858s69.47991,1.36012,69.47991-.858-31.1072-19.807-69.47991-19.807S799.31222,656.36323,799.31222,658.58132Z" transform="translate(-110.33661 -237.5817)" fill="#e4e4e4"/><polygon points="675.186 407.461 659.908 407.46 652.64 348.531 675.188 348.532 675.186 407.461" fill="#ffb6b6"/><path d="M789.41863,659.852l-49.2623-.00183v-.62309a19.17528,19.17528,0,0,1,19.17426-19.17395h.00122l30.08773.00122Z" transform="translate(-110.33661 -237.5817)" fill="#2f2e41"/><polygon points="630.031 407.461 614.753 407.46 607.485 348.531 630.033 348.532 630.031 407.461" fill="#ffb6b6"/><path d="M744.2636,659.852l-49.2623-.00183v-.62309a19.1753,19.1753,0,0,1,19.17426-19.17395h.00122l30.08773.00122Z" transform="translate(-110.33661 -237.5817)" fill="#2f2e41"/><circle cx="766.88656" cy="41.63615" r="26.56401" fill="#ffb6b6"/><path d="M920.21655,461.22417s8.91308,47.1307-24.99958,53.13247-82.86639,10.21993-82.86639,10.21993L790.36706,627.14324l-29.53443-2.63675s3.928-123.46737,13.5876-133.127,70.71212-38.58282,70.71212-38.58282Z" transform="translate(-110.33661 -237.5817)" fill="#2f2e41"/><path d="M853.98286,441.47135,839.151,456.35062s-107.0941,17.25-111.22553,41.9852c-6.23747,37.34427-13.60493,118.552-13.60493,118.552l32.1988-2.41491,12.62647-92.31123,51.5182-11.71874L869.27729,478.5Z" transform="translate(-110.33661 -237.5817)" fill="#2f2e41"/><path d="M902.78526,263.36115c-2.6223-4.94751-5.95413-14.80785-11.24679-16.63657a42.07731,42.07731,0,0,0-9.05841-1.92972l-8.99618,3.46009,4.89616-3.808q-1.42988-.08519-2.85817-.13928l-6.0699,2.33453,3.10542-2.41532c-5.65883-.05808-11.5.53031-15.88468,3.9752-3.73817,2.93677-7.44169,14.06185-8.04057,18.77753a35.9171,35.9171,0,0,0,.6603,13.53055l1.53716,1.46166a18.85936,18.85936,0,0,0,1.206-3.83883,18.18056,18.18056,0,0,1,8.70263-11.80641l.08368-.0472c2.5782-1.451,5.7065-1.3841,8.66308-1.27769l14.04158.50527c3.37829.12158,7.01608.33533,9.64978,2.45443a15.888,15.888,0,0,1,3.85826,5.58929c1.30868,2.6414,3.8661,12.60418,3.8661,12.60418s1.44689-1.88062,2.1404-.48092a48.39766,48.39766,0,0,0,2.01437-11.23347A22.00877,22.00877,0,0,0,902.78526,263.36115Z" transform="translate(-110.33661 -237.5817)" fill="#2f2e41"/><path d="M995.69426,290.88349A11.61582,11.61582,0,0,0,985.181,305.26136l-21.3614,15.75722,6.40951,15.31674,29.8539-22.67594a11.67883,11.67883,0,0,0-4.38876-22.77589Z" transform="translate(-110.33661 -237.5817)" fill="#ffb6b6"/><path d="M992.25627,323.052l-53.551,59.4744s-25.60913-8.19816-45.41466-17.08624l-8.8977-27.32787a54.34329,54.34329,0,0,1-2.60112-19.66442c27.45606-7.306,59.391,19.87863,59.391,19.87863l40.08517-31.39877Z" transform="translate(-110.33661 -237.5817)" fill="#6c63ff"/><path d="M867.301,465.6169c-9.554-3.30029-19.43312-6.71277-30.08912-7.99385l-.45773-.05533.12632-.443c11.03073-38.7308,8.27761-63.50657,2.87195-100.72306a37.59072,37.59072,0,0,1,21.5483-39.50121l.06542-.02958,30.43436-1.93391.06935-.00423,22.13437,6.50989a15.18313,15.18313,0,0,1,10.86724,14.83111c-.23987,12.23937.26868,25.9043.80711,40.37114,1.20787,32.45569,2.45686,66.01647-4.63045,87.79166l-.03718.11412-.09462.07416a36.09883,36.09883,0,0,1-23.08086,8.10758C887.90057,472.73235,877.76186,469.23034,867.301,465.6169Z" transform="translate(-110.33661 -237.5817)" fill="#6c63ff"/><path d="M1088.24817,662.4183H111.75183a1.41521,1.41521,0,1,1,0-2.83042h976.49634a1.41521,1.41521,0,1,1,0,2.83042Z" transform="translate(-110.33661 -237.5817)" fill="#ccc"/></svg>
         </div>
     </header>
+
+    <!-- Projects -->
+    <section id="Projects" class="row">
+
+        <h2 class="text-center mb-md-5 mb-4">PROJECTS</h2>
+
+        <div class="d-flex justify-content-center align-items-center flex-wrap column-gap-3 row-gap-2 mb-4">
+            <button class="btn btn-outline-primary rounded-pill">
+                Business Projects
+            </button>
+            <button class="btn btn-outline-primary rounded-pill">
+                Personal Projects
+            </button>
+        </div>
+
+        <article class="project">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-4 col-12 order-md-1 order-2 border-end">
+                        <div class="card-body">
+                            <img class="projects-business-logo mb-3" src="{% static 'portfolio/index/ITP_Aero_logo.png' %}" alt="ITP Aero logo">
+                            <h5 class="card-title">
+                                Web app for Statistical Process Control (SPC) of NGV slot depths and prediction of programmed 
+                                depths using Machine Learning
+                            </h5>
+                            <p class="card-text">
+                                A responsive fullstack web app created at ITP Aero that uses Python's Dash and other frameworks, 
+                                Bootstrap, JavaScript, a SQL database and version control tools.
+                            </p>
+                            <div class="d-flex flex-wrap column-gap-2 row-gap-2 mb-3">
+                                <p class="px-2 py-1 border rounded-pill mb-0">SQL</p>
+                                <p class="px-2 py-1 border rounded-pill mb-0">Python</p>
+                                <p class="px-2 py-1 border rounded-pill mb-0">Dash</p>
+                                <p class="px-2 py-1 border rounded-pill mb-0">Bootstrap</p>
+                                <p class="px-2 py-1 border rounded-pill mb-0">JavaScript</p>
+                                <p class="px-2 py-1 border rounded-pill mb-0">SVN Tortoise</p>
+                                <p class="px-2 py-1 border rounded-pill mb-0">SPC</p>
+                                <p class="px-2 py-1 border rounded-pill mb-0">Machine Learning</p>
+                            </div>
+                            <em class="d-flex flex-nowrap column-gap-1 align-items-center text-black">
+                                <span>Confidential project.</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 16 16"
+                                class="card-text border border-black rounded-circle confidential-icon custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                data-bs-title="As it is marked as confidential, real images of the application will not be showed and 
+                                some explanations could be omitted. Source code and live application are not available.">
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 
+                                    0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 
+                                    0 0 1 2 0z"/> 
+                                </svg>
+                            </em>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-12 order-md-2 order-1">
+                        
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- About -->
+    <section id="About" class="row">
+
+        <h2 class="text-center mb-md-5 mb-4">ABOUT ME</h2>
+
+        <!-- About section intro -->
+        <article>
+            <p class="fw-normal about-text">
+                Thank you for visiting my portfolio! My name is Mikel, and I'm an industrial engineer living in Spain interested 
+                in mechanical engineering and software development. I'm currently working at
+                <a class="d-inline-block text-primary text-decoration-none" href="https://www.itpaero.com/es/" target="_blank">
+                    ITP Aero
+                </a>
+                as a Junior Data Scientist, where I work on machine learning projects and develop Fullstack Web Applications.
+            </p>
+            <p class="fw-normal about-text mb-0">
+                Besides of engineering and software development, I love music and I dedicate my free time to my musical studies.
+                I obtained the title of Technician of the Professional Teachings of Music in the Specialty of Piano back in 2016,
+                and since then I have continued training as a pianist. In addition, nowadays I give some concerts during the year.
+            </p>
+        </article>
+
+        <!-- Working experience section -->
+        <article>
+            <h3 class="text-center mb-3">Working Experience</h3>
+            <div class="accordion" id="working-experience-accordion">
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                            <div>
+                                <h5>ITP Aero</h5>
+                                <p class="d-flex mb-0 working-experience-text">
+                                    Junior Data Scientist | September 2022 - Present
+                                </p>
+                            </div> 
+                        </button>
+                    </h4>
+                    <div id="collapse-2" class="accordion-collapse collapse" data-bs-parent="#working-experience-accordion">
+                        <div class="accordion-body">
+                            <h6>Resposibilities</h6>
+                            <ul class="list-group">
+                                <li class="list-group-item border-0">
+                                    <p class="mb-0 fw-normal working-experience-text">
+                                        Responsible for the development and maintenance of a Fullstack Web Application in Python for data
+                                        analytics based on SPC (Statistical Process Control) and generation of predictive models of machine
+                                        learning oriented to the EDM (Electrical Discharge Machining) manufacturing process.
+                                    </p>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <p class="mb-0 fw-normal working-experience-text">
+                                        Performed data analysis and statistical analysis in Python oriented to the EBW (Electron Beam Welding)
+                                        manufacturing process. Generation of predictive machine learning models.
+                                    </p>
+                                </li>
+                            </ul>
+                            <h6 class="mt-2">Key Accomplishments</h6>
+                            <ul class="list-group">
+                                <li class="list-group-item border-0">
+                                    <p class="mb-0 fw-normal working-experience-text">
+                                        Provide EDM technologists / process engineers with an application that facilitates and enables to
+                                        perform efficient process data analysis, and implement statistical tools that encourage the use of
+                                        good SPC practices.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                            <div>
+                                <h5>ITP Aero</h5>
+                                <p class="d-flex mb-0 working-experience-text">
+                                    Trainee Process Engineer | February 2022 - July 2022
+                                </p>
+                            </div> 
+                        </button>
+                    </h4>
+                    <div id="collapse-1" class="accordion-collapse collapse" data-bs-parent="#working-experience-accordion">
+                        <div class="accordion-body">
+                            <h6>Resposibilities</h6>
+                            <ul class="list-group">
+                                <li class="list-group-item border-0">
+                                    <p class="mb-0 fw-normal working-experience-text">
+                                        Participated as a Process Engineer with a multidisciplinary team in the automation of the deburring
+                                        process of an aircraft engine case.
+                                    </p>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <p class="mb-0 fw-normal working-experience-text">
+                                        Developed and maintaned code in Excel VBA. Performed other internal tasks, and used the company's
+                                        SPC (Statistical Process Control) tools as well as workshop documentation.
+                                    </p>
+                                </li>
+                            </ul>
+                            <h6 class="mt-2">Key Accomplishments</h6>
+                            <ul class="list-group">
+                                <li class="list-group-item border-0">
+                                    <p class="mb-0 fw-normal working-experience-text">
+                                        Implementation of the automatic deburring process and participation in its continuous improvement
+                                        together with a multidisciplinary team.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Skills section: Software Development -->
+        <article>
+
+            <h3 class="mb-3 text-center">Software Development Skills</h3>
+
+            <h4 class="text-center mt-1 mb-3">Frontend</h4>
+            <div class="row justify-content-center gx-sm-2 gx-md-3 gx-lg-4 gx-xl-5 row-gap-3 skills-cards">
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 384 512">
+                            <path fill="#ff5300"
+                            d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 
+                            27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">HTML</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 384 512">
+                            <path fill="#266efc"
+                            d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 
+                            28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 
+                            112h242.2z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">CSS</h6>
+                            <em class="card-text text-start">Frameworks:</em>
+                            <span class="card-text">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 448 512">
+                            <path fill="#f2d200"
+                            d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/>
+                            <path fill="#2f2f2f"
+                            d="M243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 
+                            13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 
+                            41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 
+                            24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 
+                            7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">JavaScript</h6>
+                            <em class="card-text text-start">Libraries:</em>
+                            <span class="card-text">JQuery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text-center mt-4 mb-3">Backend</h4>
+            <div class="row justify-content-center gx-sm-2 gx-md-3 gx-lg-4 gx-xl-5 row-gap-3 skills-cards">
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 448 512">
+                            <path fill="#eaea38"
+                            d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 
+                            54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 
+                            0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 
+                            0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3z"/>
+                            <path fill="#0e86d0" 
+                            d="M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 
+                            8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 
+                            56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 
+                            9.2 20.1 20.4s-9 20.3-20.1 20.3z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">Python</h6>
+                            <em class="card-text text-start">Frameworks:</em>
+                            <span class="card-text">pyobdc, Numpy, Pandas, Plotly, Dash, Sklearn, Statsmodels, Flask, Django</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 448 512">
+                            <path fill="#004db2"
+                            d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 
+                            214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 
+                            54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 
+                            390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 
+                            476.2 0 432V346.1z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">SQL</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text-center mt-4 mb-3">Tools</h4>
+            <div class="row justify-content-center gx-sm-2 gx-md-3 gx-lg-4 gx-xl-5 row-gap-3 skills-cards">
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 448 512">
+                            <path 
+                            d="M80 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48zm80-24c0 32.8-19.7 61-48 73.3v87.8c18.8-10.9 40.7-17.1 64-17.1h96c35.3 0 
+                            64-28.7 64-64v-6.7C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V160c0 70.7-57.3 
+                            128-128 128H176c-35.3 0-64 28.7-64 64v6.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 
+                            48-73.3V352 153.3C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm232 0a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM80 
+                            456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">SW Version Control</h6>
+                            <p class="card-text">Git, SVN Tortoise</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 496 512">
+                            <path 
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 
+                            1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 
+                            3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 
+                            12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 
+                            0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 
+                            23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 
+                            13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 
+                            75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 
+                            5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 
+                            1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 
+                            2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 
+                            1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">Github</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 384 512">
+                            <path 
+                            d="M14 95.7924C14 42.8877 56.8878 0 109.793 0H274.161C327.066 0 369.954 42.8877 369.954 95.7924C369.954 129.292 352.758 
+                            158.776 326.711 175.897C352.758 193.019 369.954 222.502 369.954 256.002C369.954 308.907 327.066 351.795 274.161 
+                            351.795H272.081C247.279 351.795 224.678 342.369 207.666 326.904V415.167C207.666 468.777 163.657 512 110.309 512C57.5361 
+                            512 14 469.243 14 416.207C14 382.709 31.1945 353.227 57.2392 336.105C31.1945 318.983 14 289.5 14 256.002C14 222.502 31.196 
+                            193.019 57.2425 175.897C31.196 158.776 14 129.292 14 95.7924ZM176.288 191.587H109.793C74.2172 191.587 45.3778 220.427 
+                            45.3778 256.002C45.3778 291.44 73.9948 320.194 109.381 320.416C109.518 320.415 109.655 320.415 109.793 
+                            320.415H176.288V191.587ZM207.666 256.002C207.666 291.577 236.505 320.417 272.081 320.417H274.161C309.737 320.417 338.576 
+                            291.577 338.576 256.002C338.576 220.427 309.737 191.587 274.161 191.587H272.081C236.505 191.587 207.666 220.427 207.666 
+                            256.002ZM109.793 351.795C109.655 351.795 109.518 351.794 109.381 351.794C73.9948 352.015 45.3778 380.769 45.3778 
+                            416.207C45.3778 451.652 74.6025 480.622 110.309 480.622C146.591 480.622 176.288 451.186 176.288 
+                            415.167V351.795H109.793ZM109.793 31.3778C74.2172 31.3778 45.3778 60.2173 45.3778 95.7924C45.3778 131.368 74.2172 160.207 
+                            109.793 160.207H176.288V31.3778H109.793ZM207.666 160.207H274.161C309.737 160.207 338.576 131.368 338.576 95.7924C338.576 
+                            60.2173 309.737 31.3778 274.161 31.3778H207.666V160.207Z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">Figma</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        
+        <!-- Skills section: Engineering -->
+        <article>
+
+            <h3 class="mb-3 text-center">Engineering Skills</h3>
+
+            <div class="row justify-content-center gx-sm-2 gx-md-3 gx-lg-4 gx-xl-5 row-gap-3 skills-cards">
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 448 512">
+                            <path 
+                            d="M0 32h214.6v214.6H0V32zm233.4 0H448v214.6H233.4V32zM0 265.4h214.6V480H0V265.4zm233.4 0H448V480H233.4V265.4z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">MS Office 365</h6>
+                            <p class="card-text">MS Word, MS Excel, MS Power Point</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 6 24 11">
+                            <path fill="#000000"
+                            d="M19.0424 10.089l-.993 2.4233-.9932-2.4233h-1.227l1.6066 3.921-.7039 1.7179h1.227l2.3104-5.639z
+                            m4.667 2.1272c-.1936-.1936-.5004-.3377-.9209-.4332l-.6984-.1599c-.1678-.0447-.2858-.0923-.3531-.143-.0673-.0506-.101-.1207-.101-.2101 
+                            0-.1232.0562-.2186.1683-.2859.112-.0673.2664-.101.4628-.101.426 
+                            0 .858.1513 1.2954.4542l.3362-.841c-.2241-.1627-.4767-.2886-.757-.3784a2.8304 2.8304 0 0 0-.8663-.1347c-.3476 
+                            0-.6576.0562-.9292.1683-.2724.112-.4826.2665-.631.4624-.1485.1964-.223.4237-.223.6814 
+                            0 .3254.0939.582.282.7696.1876.188.4806.3267.8789.4165l.673.1517c.2075.0447.3492.0954.4248.1512.076.0562.1136.1346.1136.2356 
+                            0 .1124-.0546.2007-.1639.2648-.1092.0645-.262.0966-.4584.0966-.2748 
+                            0-.5468-.042-.816-.1259-.2692-.0843-.5163-.2019-.7403-.3531l-.3366.8745c.23.1628.5032.2875.8204.3746.3167.0867.6655.1302 1.0471.1302.555 
+                            0 .991-.1136 1.3081-.3408.3167-.2273.4751-.5397.4751-.938-.0008-.331-.0974-.593-.2906-.7866zm-9.3815-.4332l-.698-.1599c-.1682-.0447-.2862-.0923-.3535-.143-.0669-.0506-.1006-.1207-.1006-.2101 
+                            0-.1232.0558-.2186.168-.2859.112-.0673.2664-.101.4627-.101.426 0 .858.1513 1.2955.4542l.3365-.841c-.2245-.1627-.4767-.2886-.757-.3784a2.8323 2.8323 0 0 
+                            0-.8663-.1347c-.348 0-.6576.0562-.9296.1683-.272.112-.4822.2665-.6306.4624-.1489.1964-.223.4237-.223.6814 
+                            0 .3254.0943.582.282.7696.1876.188.481.3267.8793.4165l.673.1517c.2075.0447.3488.0954.4248.1512.0756.0562.1137.1346.1137.2356 
+                            0 .1124-.0546.2007-.164.2648-.1092.0645-.2624.0966-.4584.0966-.2748 0-.5468-.042-.816-.1259-.2688-.0843-.5159-.2019-.7403-.3531l-.3362.8745c.2297.1628.5032.2875.82.3746.3167.0867.6659.1302 1.0471.1302.5551 
+                            0 .991-.1136 1.3081-.3408.3168-.2273.4751-.5397.4751-.938 0-.3305-.0966-.593-.2902-.7862-.1944-.194-.5012-.3381-.922-.4336zM9.823 9.9828c-.2918 
+                            0-.5539.059-.7863.1766-.2328.1176-.422.2886-.5677.5131v-.5887H7.2325v4.1301h1.27v-2.3133c0-.2803.08-.5048.24-.673.1595-.1683.3713-.2526.635-.2526.219 
+                            0 .3797.0645.4838.1936.1037.129.1556.3337.1556.614v2.431h1.27v-2.49c0-.5831-.1207-1.019-.3618-1.308-.2415-.2882-.6089-.4328-1.1022-.4328z
+                            M4.4334 8.4594l-.8176 1.9954 1.5381 3.7544h1.7262zm-.3726-.1873H2.4325L0 14.2091h1.6284z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">Ansys Workbench</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 512 512">
+                            <path fill="#000000"
+                            d="M352 96c0 14.3-3.1 27.9-8.8 40.2L396 227.4c-23.7 25.3-54.2 44.1-88.5 53.6L256 192h0 0l-68 117.5c21.5 6.8 44.3 10.5 68.1 
+                            10.5c70.7 0 133.8-32.7 174.9-84c11.1-13.8 31.2-16 45-5s16 31.2 5 45C428.1 341.8 347 384 256 384c-35.4 
+                            0-69.4-6.4-100.7-18.1L98.7 463.7C94 471.8 87 478.4 78.6 482.6L23.2 510.3c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 
+                            496V440.6c0-8.4 2.2-16.7 6.5-24.1l60-103.7C53.7 301.6 41.8 289.3 31.2 276c-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 
+                            11.8 13.8 18.2 20.1l69.4-119.9c-5.6-12.2-8.8-25.8-8.8-40.2c0-53 43-96 96-96s96 43 96 96zm21 297.9c32.6-12.8 62.5-30.8 
+                            88.9-52.9l43.7 75.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6 
+                            .7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9L373 393.9zM256 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">CAD</h6>
+                            <p class="card-text">Siemens NX, Catia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-5 col-sm-4 col-lg-3">
+                    <div class="card h-100 text-center">
+                        <svg class="card-img-top mt-3" height="2.6rem" viewBox="0 0 640 512">
+                            <path fill="#000000"
+                            d="M384 96V320H64L64 96H384zM64 32C28.7 32 0 60.7 0 96V320c0 35.3 28.7 64 64 64H181.3l-10.7 32H96c-17.7 0-32 14.3-32 
+                            32s14.3 32 32 32H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H277.3l-10.7-32H384c35.3 0 64-28.7 
+                            64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48V432c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 
+                            48-48V80c0-26.5-21.5-48-48-48H528zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 
+                            80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                        </svg>
+                        <div class="card-body">
+                            <h6 class="card-title">TeamCenter</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+    </section>
+
+    <div class="d-none d-sm-flex position-fixed end-0 bottom-0 me-3 me-md-4 mb-3 mb-md-5 rounded-circle bg-primary back-to-top">
+        <a class="h-100 w-100 rounded-circle d-flex justify-content-center align-items-center" href="#">
+            <svg height="2rem" viewBox="0 0 384 512">
+                <path fill="#ffffff"
+                d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 
+                14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
+            </svg>
+        </a>
+    </div>
 
 {% endblock content %}

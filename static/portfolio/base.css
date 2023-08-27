@@ -1,9 +1,11 @@
 html {
 	scroll-behavior: smooth;
+	scroll-padding: 13rem 0 0 0; /* height of sticky header */
 }
 
 body {
 	min-height: 100vh;
+	min-height: 100svh;
 }
 
 main {

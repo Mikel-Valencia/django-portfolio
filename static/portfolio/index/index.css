@@ -1,3 +1,43 @@
+/* ======================================================================
+-------------------------- General styles ------------------------------- 
+======================================================================= */
+section h2 {
+	font-size: calc(1.350rem + 1vw);  /* +.?vw defined as Bootstrap styling */
+}
+
+section:not(:last-of-type) {
+	margin-bottom: 4rem;
+}
+
+section article:not(:last-child) {
+	margin-bottom: 3rem;
+}
+
+.custom-tooltip {
+	--bs-tooltip-opacity: .4;
+}
+
+@media (max-width: 768px) {
+	section article:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+	section h2 {
+		margin-bottom: 2rem !important;
+	}
+	h3 {
+		font-size: calc(1.15rem + .6vw) !important;  /* +.?vw defined as Bootstrap styling */
+	}
+	p, em {
+		font-size: .9rem !important;
+	}
+	button {
+		font-size: .85rem !important;
+	}
+}
+
+/* ======================================================================
+-------------------------- Splash screen -------------------------------- 
+======================================================================= */
 .splash-screen {
 	height: 100vh;
 	height: 100svh;
@@ -30,16 +70,150 @@
 	}
 }
 
+
+/* ======================================================================
+-------------------------- Hero section --------------------------------- 
+======================================================================= */
 header {
-    padding: 140px 0 140px 0;
+	height: calc(100vh - 4.5rem - 1.5rem);
+	height: calc(100svh - 4.5rem - 1.5rem);
 }
 
 .social-links a {
-	font-size: 28px;
+	font-size: 1.5rem;
 	color: black;
 	transition: 500ms;
 }
 
 .social-links a:hover {
 	translate: 0 -4px 0;
+}
+
+@media (max-width: 768px) {
+	header {
+		min-height: calc(650px - 4.5rem - 1.5rem);
+	}
+	.gmail-link span, .social-links span {
+		font-size: .85rem !important;
+	}
+}
+
+@media (max-width: 430px) {
+	.download-CV {
+		--bs-btn-padding-x: .7rem;
+		--bs-btn-padding-y: .365rem;
+		--bs-btn-font-size: .85rem;
+	}
+}
+
+
+/* ======================================================================
+------------------------- Projects section ------------------------------ 
+======================================================================= */
+.projects-business-logo {
+	height: 2rem;
+}
+
+.tooltip .tooltip-inner {
+	text-align: left;
+}
+
+@media (max-width: 768px) {
+	.project .confidential-icon {
+		height: .9rem;
+		width: .9rem;
+	}
+}
+
+
+/* ======================================================================
+-------------------------- About section -------------------------------- 
+======================================================================= */
+.accordion-button {
+	--bs-accordion-active-color: black;
+	--bs-accordion-active-bg: #eeeeee;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+.card {
+	position: relative;
+	box-shadow: 0 .125rem .25rem 0 rgba(0,0,0,.1);
+	transition: transform 800ms ease;
+}
+
+.card:hover {
+	transform: translateY(-.35em) scale(1.02);
+}
+
+.card::after {
+	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+	opacity: 0;
+    box-shadow: 0 .5rem 1rem -.25rem rgba(0, 0, 0, .3);
+	transition: opacity 800ms ease;
+}
+.card:hover::after {
+	opacity: 1;
+}
+
+@media (max-width: 768px) {
+	.skills-cards .card .card-title {
+		font-size: .9rem !important;
+	}
+	.skills-cards .card .card-text {
+		font-size: .8rem !important;
+	}
+	.skills-cards .card .card-body {
+		--bs-card-spacer-x: .8rem;
+	}
+}
+@media (max-width: 500px) {
+	.skills-cards .col {
+		width: 50% !important;
+	}
+}
+@media (max-width: 430px) {
+	.skills-cards .col {
+		width: 70% !important;
+	}
+}
+@media (max-width: 330px) {
+	.skills-cards .col {
+		width: 90% !important;
+	}
+}
+@media (max-width: 260px) {
+	.skills-cards .col {
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 430px) {
+	.about-download-CV {
+		--bs-btn-padding-x: .7rem;
+		--bs-btn-padding-y: .365rem;
+		--bs-btn-font-size: .85rem;
+	}
+}
+
+.back-to-top {
+	height: 4rem;
+	width: 4rem;
+}
+
+.back-to-top svg {
+	transition: transform 300ms ease-in;
+}
+
+.back-to-top:hover svg {
+	transform: translateY(-.3rem);
 }
