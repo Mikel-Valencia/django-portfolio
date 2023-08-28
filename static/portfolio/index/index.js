@@ -1,19 +1,50 @@
-// Initiallize Bootstrap tooltips.
+// Initiallize Bootstrap tooltips
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-const path = document.getElementById("splash-screen-logo-path");
+// // Back to top button
+// const backToTopButton = document.querySelector(".back-to-top")
+// const buttonObserver = new IntersectionObserver((entry) => {
+//     entry.classList.toggle("back-to-top-show", entry.isIntersecting)
+// }, {
+//     rootMargin: "-300px",
+// });
 
-// tl.to(path, { Animation: "none", delay: 1.75 });
-// tl.to(".splash-screen", { y: "-100%", duration: .8, delay: 1.9 });
-tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: .3, delay: 2.7 });
-tl.fromTo(".intro", { opacity: 0 }, { opacity: 1, duration: .3 }, "-=.3");
-tl.fromTo(".svg-separator", { opacity: 0 }, { opacity: 1, duration: .3 });
-tl.fromTo(".description", { opacity: 0 }, { opacity: 1, duration: .3 });
-tl.fromTo(".social-links", { opacity: 0 }, { opacity: 1, duration: .3 });
+// buttonObserver.observe(backToTopButton)
 
-// Gmail copy to clipboard.
+// Scroll animations
+const headerObserverElements = document.querySelectorAll("header .scroll-observe")
+const headerScrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("scroll-observe-show", entry.isIntersecting)
+        if (entry.isIntersecting) {
+            headerScrollObserver.unobserve(entry.target)
+        }
+    });
+});
+
+headerObserverElements.forEach(elem => {
+    headerScrollObserver.observe(elem)
+});
+
+const observedElements = document.querySelectorAll("section .scroll-observe")
+const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("scroll-observe-show", entry.isIntersecting)
+        if (entry.isIntersecting) {
+            scrollObserver.unobserve(entry.target)
+        }
+    });
+}, {
+    rootMargin: "-50px",
+});
+
+observedElements.forEach(elem => {
+    scrollObserver.observe(elem)
+});
+
+
+// Gmail copy to clipboard
 const gmailBtn = document.getElementById("gmail-btn");
 
 function copyGmail() {
